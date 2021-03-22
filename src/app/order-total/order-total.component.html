@@ -1,0 +1,38 @@
+<div class="bg-light px-4 py-3 text-uppercase font-weight-bold">
+    Order Summary
+</div>
+<div class="p-4">
+<p class="p font-italic mb-4">
+    Each Order have 14% Tax added to it 
+</p>
+<ul class="list-unstyled mb-4" *ngIf="(basketTotal$ | async) as totals">
+    <li class="d-flex justify-content-between py-3 border-bottom">
+        <strong class="text-muted">Before Sale</strong>
+        <strong class="">{{totals.TotalValue |currency}}</strong>
+    </li>
+    <li class="d-flex justify-content-between py-3 border-bottom">
+        <strong class="text-muted">Total after sales</strong>
+        <strong class="">{{totals.afterSaleTotal |currency}}</strong>
+    </li>
+    <li class="d-flex justify-content-between py-3 border-bottom">
+        <strong class="text-muted">Tax</strong>
+        <strong class="">{{totals.TaxPerc}}%</strong>
+        <strong class="text-muted">Tax Total</strong>
+        <strong class="">{{totals.TaxVal |currency}}%</strong>
+    </li>
+    <li class="d-flex justify-content-between py-3 border-bottom">
+        <strong class="text-muted">Discount </strong>
+        <strong class="">{{totals.DiscountPerc}}%</strong>
+        <strong class="text-muted">Invoice Discount</strong>
+        <strong class="">{{totals.DiscountVal |currency}}</strong>
+    </li>
+    <li class="d-flex justify-content-between py-3 border-bottom">
+        <strong class="text-muted">Number Of Items</strong>
+        <strong class="">{{totals.numOfItems }}</strong>
+    </li>    
+    <li class="d-flex justify-content-between py-3 border-bottom">
+        <strong class="text-muted">Total Invoice Price</strong>
+        <strong class="">{{totals.TotalPrice |currency}}</strong>
+    </li>
+</ul>
+</div>

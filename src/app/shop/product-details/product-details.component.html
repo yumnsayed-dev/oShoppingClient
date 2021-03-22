@@ -1,0 +1,27 @@
+<div class='row' *ngIf="Product">
+ <div class="col-6">
+     <img src="{{Product.productImg}}" alt="{{Product.productName}}" class="img-fluid w-100">
+ </div>
+ <div class="col-6">    
+     <h3>{{Product.productName}}</h3>
+     <p class="mb-2">Price:  {{Product.totalPrice | currency }}</p>
+     <p class="mb-2">After : {{Product.onSalePrice |currency }}</p>
+     <p class="mb-2">Unit-Type : {{Product.unitOfMeasure }}</p>
+
+     <div class="d-flex justify-content-start align-items-center">
+         <i class="fa fa-minus-circle text-warning mr-2" style="cursor:pointer; font-size: 2em;"(click)="DecermentQuantity()"></i>
+         <span style="font-weight: bold;" style="font-size: 1.5em;">{{Quantity}}</span>
+         <i class="fa fa-plus-circle text-warning mx-2" style="cursor:pointer; font-size: 2em;"(click)="incermentQuantity()"></i>
+         <button class="btn btn-outline-primary btn-lg ml-4"(click)="addItemToCard()">
+            Add to Card
+         </button> 
+     </div>
+ </div>
+ <div class="row mt-5">
+    <div class="div col-12 ml-3">
+        <h4>Discription</h4>
+        <p>{{Product.description}}</p>
+    </div>
+ </div>
+</div>
+
