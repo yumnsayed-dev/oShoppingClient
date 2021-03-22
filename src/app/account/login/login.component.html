@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center mt-5">
+    <div class="col-6">
+        <div class="div text-center mb-4">
+            <h1 class="h3 mb-3 fw-normal text-info"> Login</h1>
+        </div>
+        
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <label for="inputEmail" class="visually-hidden">Email address</label>
+            <input formControlName="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" >
+            
+            <label for="inputPassword" class="visually-hidden">Password</label>
+            <input formControlName="password" type="password" id="inputPassword" class="form-control" placeholder="Password" >
+        
+            <div class="div text-center mb-4">
+            <button class="w-50 btn btn-lg btn-primary my-3" type="submit">Sign in</button>
+            </div>
+         </form>
+    </div>
+</div>

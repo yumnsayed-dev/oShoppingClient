@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center mt-5">
+    <div class="col-6">
+        <div class="div text-center mb-4">
+            <h1 class="h3 mb-3 fw-normal text-info"> Sign Up</h1>
+        </div>
+        
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" autocomplete="off">
+            <label for="inputEmail" class="visually-hidden">Display Name</label>
+            <input formControlName="displayName" type="text"  class="form-control" placeholder="Display Name">
+            
+            <br>
+            <label for="inputEmail" class="visually-hidden">Email Address</label>
+            <input formControlName="EmailAddress" type="email" id="inputEmail" class="form-control" placeholder="Email address">
+           
+            <br>
+            <label for="inputPassword" class="visually-hidden">Password</label>
+            <input formControlName="password" type="password" id="inputPassword" class="form-control" placeholder="Password"  >
+           
+            <br>
+            <div class="div text-center mb-4">
+            <button class="w-50 btn btn-lg btn-primary my-3" type="submit">Register</button>
+            </div>
+         </form>
+    </div>
+</div>
